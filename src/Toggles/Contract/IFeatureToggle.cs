@@ -2,6 +2,6 @@ namespace FeatureToggle.Toggles.Contract
 {
     public interface IFeatureToggle
     {
-        string ToggleName { get; }
+        string GetToggleName() { return string.Empty; }
     }
 }
