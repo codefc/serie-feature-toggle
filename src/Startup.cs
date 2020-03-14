@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using FeatureToggle.Extensions;
+using FeatureToggle.Config;
 
 namespace FeatureToggle
 {
@@ -23,6 +25,12 @@ namespace FeatureToggle
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            // Add Services classes in IoC
+            services.AddConfigCat(Configuration);
+            services.AddDogService(Configuration);
+            services.AddFeatureToggleServices();
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

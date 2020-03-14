@@ -17,13 +17,11 @@ namespace FeatureToggle.Filters
 
         public override void OnActionExecuting(ActionExecutingContext context)
         {
-            IConfigCatClient _configCatClient = context.HttpContext.RequestServices.GetService(typeof(IConfigCatClient)) as IConfigCatClient;
+            IFeatureToggleClient _featureToggleClient = context.HttpContext.RequestServices.GetService(typeof(IFeatureToggleClient)) as IFeatureToggleClient;
 
-            if (_configCatClient != null) 
+            if (_featureToggleClient != null) 
             {
-                _configCatClient.ForceRefresh();
-
-                if (!_configCatClient.GetValue(_toggle, false))
+                if (!_featureToggleClient.IsValid(_toggle))
                     context.Result = new NotFoundResult();
             }
         }
