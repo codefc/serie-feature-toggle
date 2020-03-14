@@ -8,3 +8,4 @@ Para acompanhar a série, acesse os artigos:
 - [Artigo 1](https://codefc.com.br/feature-toggle-parte-1/)
 - [Artigo 2](https://codefc.com.br/feature-toggle-parte-2/)
 - [Artigo 3](https://codefc.com.br/feature-toggle-parte-3/)
+- [Artigo 4](https://codefc.com.br/feature-toggle-parte-4/)
