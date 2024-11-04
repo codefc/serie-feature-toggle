@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="ConfigCat.Client" Version="3.2.28" />
-    <PackageReference Include="refit" Version="5.0.23" />
+    <PackageReference Include="refit" Version="8.0.0" />
     <PackageReference Include="Refit.HttpClientFactory" Version="5.0.23" />
   </ItemGroup>
 
